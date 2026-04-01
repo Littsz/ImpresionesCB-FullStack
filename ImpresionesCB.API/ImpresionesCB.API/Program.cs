@@ -22,14 +22,10 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-
-
-
-app.UseHttpsRedirection();
 app.UseCors("PermitirTodo");
 
 
-
+app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
